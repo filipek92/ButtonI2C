@@ -12,6 +12,8 @@
 #define REGISTER_RELEASED   2
 #define REGISTER_LED        3
 #define REGISTER_VALUE      8
+#define REGISTER_MAX        12
+#define REGISTER_MIN        16
 
 class ButtonI2C
 {

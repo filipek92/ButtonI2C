@@ -29,8 +29,13 @@ uint8_t ButtonI2C::state(){
   return 0;
 }
 
-void ButtonI2C::setMax(int32_t max){}
-void ButtonI2C::setMin(int32_t min){}
+void ButtonI2C::setMax(int32_t max){
+  writeReg(REGISTER_MAX, &max, sizeof(max));
+}
+
+void ButtonI2C::setMin(int32_t min){
+  writeReg(REGISTER_MIN, &min, sizeof(min));
+}
 
 bool ButtonI2C::button(int8_t id){
   return buttons() & (1<< id);
